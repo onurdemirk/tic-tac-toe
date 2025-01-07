@@ -1,15 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic Tac Toe</title>
     <script src="script.js" defer></script>
-</head>
-<body>
-
-    <button type="button" id="startButton">Start the game!</button>
-
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="sidebar">
+        <p id="header">Tic Tac Toe</p>
+        <div class="content active" id="intro">
+          <br />
+          <p>This game is designed for two players.</p>
+          <br />
+          <p>
+            Each player takes turns placing their symbol (X or O) on the grid.
+          </p>
+          <br />
+          <p>
+            The goal is to align three symbols in a row, column, or diagonal to
+            win.
+          </p>
+          <br /><br />
+          <button class="side-button" type="button" id="start-button">Start Game</button>
+        </div>
+        <div class="content" id="first-player">
+          <form>
+            <label for="fPlayer">First Player Name:</label><br />
+            <input
+              type="text"
+              id="fPlayer"
+              name="fplayer"
+              max="10"
+              min="1"
+              required
+            /><br /><br /><br />
+            <button class="side-button" type="submit" id="firstNext">
+              Next
+            </button>
+          </form>
+        </div>
+        <div class="content" id="second-player">
+          <form>
+            <label for="sPlayer">Second Player Name:</label><br />
+            <input
+              type="text"
+              id="sPlayer"
+              name="splayer"
+              maxlength="10"
+              minlength="1"
+              required
+            /><br /><br /><br />
+            <button class="side-button" type="submit" id="secondNext">
+              Next
+            </button>
+          </form>
+        </div>
+        <div class="content" id="start">
+          <p id="showFirstName">asd</p>
+          <p id="showSecondName">asd</p>
+          <button id="start-game" class="side-button" type="button">Start!</button>
+        </div>
+        <div class="content" id="nameMonitor">
+            <p id="switchName"></p>
+            <button type="button" class="side-button" id="restart">Restart!</button>
+          </div>
+      </div>
+      <div class="game">
+        <div class="board firstblock"></div>
+        <div class="board firstblock"></div>
+        <div class="board secondblock"></div>
+        <div class="board firstblock"></div>
+        <div class="board firstblock"></div>
+        <div class="board secondblock"></div>
+        <div class="board thirdblock"></div>
+        <div class="board thirdblock"></div>
+        <div class="board"></div>
+      </div>
+    </div>
+  </body>
 </html>
