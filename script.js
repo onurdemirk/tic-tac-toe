@@ -272,6 +272,7 @@ restart.addEventListener("click", () => {
     cell.innerHTML = ""; 
     cell.style.pointerEvents = "auto";
     cell.classList.add("hover-enabled");  
+    draw = false;
   });
 
 
